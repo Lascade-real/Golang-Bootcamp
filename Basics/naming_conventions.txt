@@ -1,0 +1,36 @@
+package basics
+
+import "fmt"
+
+type Player1 struct {
+	firstName string
+	lastName  string
+	Age       int
+}
+
+type Player2 struct {
+	firstName string
+	lastName  string
+	Age       int
+}
+
+func main() {
+	//PascalCase
+	//Eg. CalculateArea, UserInfo, NewHTTPRequest
+	//Structs, interfeaces, enums
+
+	//snake_case
+	//Eg. user_id, first_name. http_request
+
+	//UPPERCASE
+	//Use case is Constants
+
+	//mixedCase
+	//Eg. javaScript, htmlDocument, isValid
+
+	const MAX_RETIRES = 5
+
+	var PlayerId = 1909
+	fmt.Println("PlayerID: ", PlayerId)
+
+}
