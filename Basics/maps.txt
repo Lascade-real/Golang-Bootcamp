@@ -1,0 +1,33 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	//initialize map variable
+	//var mapVariable map[keyType]valueType
+
+	//mapVariable =  make(map[keyType]valueType)
+
+	// using a Map Literal
+	// mapVariable = map[keyType]valueType{
+	// 	key1: value1,
+	// 	key2: value2,
+	// }
+
+	myMap := make(map[string]int)
+
+	fmt.Println(myMap)
+
+	myMap["key1"] = 9
+	myMap["code"] = 18
+	
+	fmt.Println(myMap)
+	fmt.Println(myMap["key"])
+	fmt.Println(myMap["key1"])
+	myMap["code"] = 21
+	fmt.Println(myMap)
+
+	delete(myMap, "key1")
+
+}
