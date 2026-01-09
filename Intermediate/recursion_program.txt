@@ -1,0 +1,70 @@
+package main
+
+import "fmt"
+
+func getFib(n int) int {
+	if n == 0 {
+		return 0 //base case 1
+	}
+
+	if n == 1 {
+		return 1 //base case 2
+	}
+
+	return getFib(n-1) + getFib(n-2) //recursive case
+}
+
+
+func getFib2(p int) int {
+	if p == 0 {
+		return 0 //base case
+	}
+
+	if p == 1 {
+		return 1 //base case 2
+	}
+
+	return getFib2(p - 1) + getFib2( p -2) //recursive case
+	
+}
+
+func getFib3(f int) int {
+	if f ==0 {
+		return 0 //base case
+	}
+
+	if f == 1 {
+		return 1 //base case 2
+	}
+
+	return getFib3(f-1) + getFib3(f-2) //recursive case
+}
+
+
+func main() {
+
+	var i int
+
+	var m int 
+
+	var k int
+
+
+	for i = 0; i < 10; i++ {
+		fmt.Println("number set 10", getFib(i))
+	}
+	fmt.Println()
+
+
+	for m = 0; m < 20; m ++ {
+		fmt.Println("number set 20", getFib2(m))
+	} 
+	fmt.Println()
+
+
+	for k = 0; k < 30; k++ {
+		fmt.Println("number set 30", getFib3(k))
+	} 
+	fmt.Println()
+
+}
