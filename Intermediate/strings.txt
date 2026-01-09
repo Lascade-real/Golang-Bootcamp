@@ -1,0 +1,77 @@
+package intermediate
+
+import (
+	"fmt"
+	"unicode/utf8"
+)
+
+func main() {
+
+	message := "Hello, \nGo!"
+	message1 := "Hello, \tGo!"
+	message2 := "Hello, \rGo!"
+
+	rawMessage := `Hello\nGo` //backtick ``
+	fmt.Println(message)
+	fmt.Println(message1)
+	fmt.Println(message2)
+	fmt.Println(rawMessage)
+
+	fmt.Println("length of  raw message variable is", len(rawMessage))
+
+	fmt.Println("The first character in message var is", message[0]) //ASCII
+
+	greeting := "Hello " //spaces allows for desired output
+	name := "Kanade"
+	fmt.Println(greeting + name) //direct concatenation no space between words
+
+	str1 := "Apple"	//A has an ASCII value of 65
+	str := "apple"
+	str2 := "Banana" //b has an ASCII value of 98
+	str3 := "app" //comparing the ASCII value of characters which is 97
+
+	fmt.Println(str1 < str2)
+	fmt.Println(str3 < str1)
+	fmt.Println(str > str1)
+	fmt.Println(str > str3)
+
+	for _, char := range message{
+		// fmt.Printf("Character at index %d is %c\n", i, char)
+		fmt.Printf("%v\n", char)
+	}
+
+	fmt.Println("Rune count: ", utf8.RuneCountInString(name))
+
+	greetingWithName := greeting + name
+	fmt.Println(greetingWithName)
+
+		var jp rune =  'a'
+		ch := '日'
+
+		fmt.Println(jp)
+		fmt.Println(ch)
+
+		fmt.Printf("%c\n", jp)
+		fmt.Printf("%c\n", ch)
+
+		cstr := string(jp)
+		fmt.Println(cstr)
+
+		fmt.Printf("Type of cstr is %T\n", cstr)
+
+		const NIHONGO = "奏、愛してるよ" //dont translate this
+		fmt.Println(NIHONGO)
+
+		jp_motivation := "がんばります" // do your best
+
+		for _, runeValue := range jp_motivation {
+			fmt.Printf("%v\n", runeValue)
+		}
+
+		r := '🗿'
+		fmt.Printf("%v\n", r)
+		fmt.Printf("%c\n", r)
+
+
+
+}
